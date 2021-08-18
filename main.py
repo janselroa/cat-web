@@ -6,7 +6,7 @@ import functions
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY']='flaskapp'
+app.config['SECRET_KEY']=os.environ['secret_key']
 #configurando Flask Email
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
@@ -51,4 +51,4 @@ def contacto():
 		return "Error"
 
 
-app.run(debug=True)
+app.run()
