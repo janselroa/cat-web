@@ -2,7 +2,8 @@
 una web de gatitos y mas
 
 #### preview
-<img src="previw.jpg">
+<img src="previw1.jpg">
+<img src="previw2.jpg">
 
 ### primero por supuesto debe tener instalado <a href="https://python.org">python<a>
 
