@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>{% block title %}Razas de Gato{% endblock %}</title>
+<section class="section-races">
+	<h1 class="section-races__title">Razas de gatos mas famosas</h1>
+	<div class="section-races__card">
+		<article class="section-races__article section-races-flex">
+		<img class="section-races__img" src="{{ url_for('static',filename='img/maine_coo.jpg') }}" alt="gato maine coon">
+		<p>El maine coon, coon de maine o mancoon es una raza de gato doméstico originaria de Estados Unidos, conocida por ser la raza de gato doméstico más grande del mundo. Tiene una apariencia física distintiva y valiosas habilidades de caza. Es una de las razas naturales más antiguas de América del Norte, específicamente nativa del estado de Maine, como su nombre lo sugiere, donde se considera el gato oficial.</p>
+	</article>
+	<article class="section-races__article">
+		<img class="section-races__img" src="{{ url_for('static',filename='img/gato_americano.jpg') }}" alt="gato maine coon">
+		<p>El gato americano de pelo corto o American shorthair es una raza de gato originaria de Estados Unidos.
+			Se trata de una raza robusta que debe mucho a los gatos de trabajo que los primeros colonizadores trajeron a los Estados Unidos, pero su pedigrí se remonta hasta un macho atigrado rojizo, llamado Belle, que fue enviado desde Inglaterra al inicio del siglo XIX, y que fue el primero en registrarse en Estados Unidos bajo el título "de Pelo Corto"
+		</p>
+	</article>
+	<article class="section-races__article">
+		<img class="section-races__img" src="{{ url_for('static',filename='img/gato_turco.jpg') }}" alt="gato maine coon">
+		<p>Características del gato Van Turco El Van Turco es considerado una raza mediana a grande, de estructura musculosa y fuerte. La cabeza es triangular, la nariz larga y recta con la punta desprovista de pigmento, al igual que las almohadillas plantares. Sus orejas son grandes y peludas, de color rosa en el interior.</p>
+	</article>
+	<article class="section-races__article">
+		<img class="section-races__img" src="{{ url_for('static',filename='img/gato_British.jpg') }}" alt="gato maine coon">
+		<p>El Británico de pelo corto o British Shorthair es una raza de gato que desciende del cruce entre los gatos que llevaron a Britania los romanos y los nativos de la isla. Estos gatos se protegen muy bien del clima británico por su pelaje doble e impermeable.</p>
+	</article>
+
+		<article class="section-races__article">
+					<img src="{{ url_for('static',filename='img/gato_persa.jpg') }}" alt="gato persa">
+		<p>El Persa es una raza de gato caracterizada por tener una cara ancha y plana y un gran abundante pelaje de variados colores. Son considerados comúnmente como gatos aristocráticos</p>
+
+	</article>
+	<article class="section-races__article">
+			<img src="{{ url_for('static',filename='img/gato_bengala.jpg') }}" alt="gato persa">
+			<p>El bengala es una raza de gato doméstica desarrollada para parecerse a los felinos salvajes exóticos tales como son los leopardos, ocelotes, margays, etc. El gato bengala, fue un resultado fortuito del cruce casual entre un gato doméstico y una hembra gato leopardo</p>
+	</article>
+	<article class="section-races__article">
+		<img src="{{ url_for('static',filename='img/gato_europeo.jpg') }}" alt="gato persa">
+		<p>El gato común europeo es una raza de gato, como su nombre indica, originario de Europa, probablemente descendiente del gato montés africano y del gato de la jungla. Fue reconocido como raza el 1 de enero de 1983. Los felinos de esta raza son fuertes y cuentan con un sólido sistema inmunológico
+		</p>
+		</article>
+	</div>
+	
+</section>
+{% endblock %}

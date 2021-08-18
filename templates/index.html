@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+	<title>
+	{% block title %}Home{% endblock %}
+	</title>
+
+
+	<header class="header">
+	</header>
+
+	<div class="container">
+		{% for i in imagenes %}
+		 <img src="../static/img/gatos/{{ i }}" alt="gato">
+		{% endfor %}
+	</div>
+	<section class="section-races">
+		<h2 class="section-races__title">vea mas gato</h2>
+			<div class="section-races__card">
+
+				<article class="section-races__article">
+					<img src="{{ url_for('static',filename='img/gato_persa.jpg') }}" alt="gato persa">
+					<p>El Persa es una raza de gato caracterizada por tener una cara ancha y plana y un gran abundante pelaje de variados colores. Son considerados comúnmente como gatos aristocráticos</p>
+				</article>
+				<article class="section-races__article">
+					<img src="{{ url_for('static',filename='img/gato_bengala.jpg') }}" alt="gato persa">
+					<p>El bengala es una raza de gato doméstica desarrollada para parecerse a los felinos salvajes exóticos tales como son los leopardos, ocelotes, margays, etc. El gato bengala, fue un resultado fortuito del cruce casual entre un gato doméstico y una hembra gato leopardo</p>
+				</article>
+				<article class="section-races__article">
+					<img src="{{ url_for('static',filename='img/gato_europeo.jpg') }}" alt="gato persa">
+					<p>El gato común europeo es una raza de gato, como su nombre indica, originario de Europa, probablemente descendiente del gato montés africano y del gato de la jungla. Fue reconocido como raza el 1 de enero de 1983. Los felinos de esta raza son fuertes y cuentan con un sólido sistema inmunológico
+					</p>
+				</article>
+			</div>
+			<div class="section-races__enlaces">
+
+				<a href="{{ url_for('cat_random') }}">Gatos Random</a>
+				<a href="{{ url_for('races_cat') }}">Razas de Gato</a>
+			</div>
+	</section>
+
+{% endblock %}

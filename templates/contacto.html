@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="contacto">
+	<h2>Contactame</h2>
+	<form action="/contacto" method="post">
+		<input type="text" name="asunto" placeholder="Titulo del mensaje" required>
+		<input type="email" name="name" placeholder="Tu correo electronico" required>
+		<textarea placeholder="Contenido del mensaje..." name="mensaje" required autocomplete></textarea>
+		<input type="submit">
+	</form>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul>
+		{% for message in messages %}
+			<li class="flash_message">{{ message }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</div>
+{% endwith %}
+{% endblock %}
