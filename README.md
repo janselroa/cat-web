@@ -29,5 +29,11 @@ pipenv shell
 ```
 pip install -r requirements.txt 
 ```
-
-### listo ahora valla a <a href="http://localhost:5000">localhost:5000<a>
+### configurar variables de entorno
+<p>en el programa use variables de entorno por temas de seguridad
+  asique puedes configurar esas variables de entorno 'secret_key,email,email_password'
+  y llenarlas directamente con tus datos
+  o puedes escribir directamnete los datos correspondientes de las lineas 9 a 16
+ 
+ </p>
+<h2>listo ahora valla a <a href="http://localhost:5000">localhost:5000<a></h2>
