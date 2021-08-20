@@ -36,4 +36,12 @@ pip install -r requirements.txt
   o puedes escribir directamnete los datos correspondientes de las lineas 9 a 16
  
  </p>
+  ### luego simplemente ejecutar el archivo principal
+ ```
+  python main.py
+ ```
+### en linux o mac
+```
+  python3 main.py
+```
 <h2>listo ahora valla a <a href="http://localhost:5000">localhost:5000<a></h2>
