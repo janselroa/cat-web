@@ -1,0 +1,7 @@
+{% extends "layout.html" %} {% block content %}
+<div class="error-404">
+    <h2>404 no encontrado</h2>
+    <img src="{{ url_for('static',filename='img/gatos/gato.gif') }}" alt="gato, gato en una caminadora">
+    <p>lo que buscas no existe o se a movido de lugar, ve a <a href="/">inicio</a></p>
+</div>
+{% endblock %}

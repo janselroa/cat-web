@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
-	<link rel="icon" href="{{ url_for('static',filename='img/gatos/gato12.jpg') }}">
-	<title>{% block title %}{% endblock %} | Cat Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+
+    <link rel="icon" href="{{ url_for('static',filename='img/gatos/gato12.jpg') }}">
+
+    <title>{% block title %}{% endblock %} | Cat Web</title>
 </head>
+
 <body>
-		<input type="checkbox" id="btn-menu">
-		<div class="nav_res">
-
-			<label class="menu-label" for="btn-menu"><img src="{{ url_for('static',filename='img/home.svg') }}" alt="home"></label>
-		</div>
-		<nav class="nav">
-			<ul class="nav__ul">
-
-				<li class="nav__li"><a href="{{ url_for('index') }}">Inicio</a></li>
-
-				<li class="nav__li"><a href="{{ url_for('races_cat') }}">Razas de gato</a></li>
-				<li class="nav__li"><a href="{{ url_for('cat_random') }}">Mas gatos</a></li>
-
-				<li class="nav__li"><a href="{{ url_for('contacto') }}">Contacto</a></li>
-			</ul>
-		</nav>
-
-		{% block content %}
-		{% endblock %}
-	<footer class="footer">
-		<p>2021 &copy por Jansel Roa, un progroyecto open source <a target="_blank" href="https://github.com/janselroa">Github Proyect</a></p>
-	</footer>
+    <div class="barra-menu">
+        <div class="barra">
+            <img src="{{ url_for('static',filename='img/menu.svg') }}" alt="menu icon" class="icon-menu">
+        </div>
+    </div>
+    <ul class="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/random-cat">Gatos Aleatorios</a></li>
+        <li><a href="/about">Contacto</a></li>
+    </ul>
+    {% block content %} {% endblock %}
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+    <footer class="footer">
+        <img class="logo-jansel" src="{{ url_for('static',filename='img/janselroa.jpg') }}" alt="">
+        <p>2021 &copy por Jansel Roa, un progroyecto open source <a target="_blank" href="https://github.com/janselroa">Github Proyect</a></p>
+    </footer>
 
 </body>
+
 </html>

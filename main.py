@@ -2,7 +2,6 @@ from flask import Flask
 from flask import request,render_template,flash,url_for,redirect
 from flask_mail import Mail,Message
 import os
-import functions
 
 app = Flask(__name__)
 
@@ -23,32 +22,34 @@ def index():
 	imagenes = os.listdir("static/img/gatos")
 	return render_template("index.html",imagenes=imagenes)
 
-@app.route('/random_cat')
+@app.route('/random-cat')
 def cat_random():
-	gatos = functions.generar_cat()
-	return render_template("cat_random.html",gatos=gatos)
+	return render_template("cat_random.html")
 
-@app.route('/races_cat')
+@app.route('/races-cat')
 def races_cat():
 	return render_template("races_cat.html")
 
-@app.route('/contacto',methods=['GET','POST'])
-def contacto():
+@app.errorhandler(404)
+def error404(e):
+	return render_template("404.html"),404
+
+
+@app.route('/about',methods=['GET','POST'])
+def about():
 	if request.method == 'GET':
 		return render_template('contacto.html')
 
 	elif request.method == 'POST':
 		mensaje = [request.form['asunto'],request.form['name'],request.form['mensaje']]
-		mensajes = list(map(functions.limpiar_str,mensaje))
 		msg = Message(recipients=[os.environ['EMAIL']],
 			body=mensaje[2],
 			subject=mensaje[0]
 		)
 		mail.send(msg)
 		flash('Gracias email enviado correctamente')
-		return redirect(url_for('contacto'))
 	else:
 		return "Error"
 
 
-app.run()
+app.run(debug=True)

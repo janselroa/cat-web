@@ -1,11 +1,9 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 <title>{% block title %}Cat Random{% endblock %}</title>
 <h1 class="cat-random-title">Gatos y mas Gatos</h1>
 <div class="card-cat">
-	{% for i in gatos %}
-		<img class="cat-img" src="{{ i }}">
-	{% endfor %}
-<p class="card-cat__intruccion">puede reiniciar la pagina para ver mas gatos</p>
+
 </div>
+<button id="button">mas gatos</button>
+<script src="{{ url_for('static',filename='js/cat-random.js') }}"></script>
 {% endblock %}

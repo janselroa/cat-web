@@ -1,161 +1,171 @@
 /* importando componetes */
+
 @import "nav.css";
 @import "contacto.css";
-
-
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
-    padding-top: 200px;
     font-family: arial;
+    min-height: 100vh;
     margin: 0;
+    overflow-x: hidden;
 }
 
-.header{
-    position: absolute;
-    top: 30px;
-    width: 100%;
-    height: 500px;
-    background: no-repeat url("../img/gatos/gato12.jpg");
-    background-size: cover;
-    background-attachment: fixed;
- 
-}
-.header::after{
-    content: "Tu web de gatos";
-    position: absolute;
-    top: 100px;
-    right: 30%;
-    color: #000;
-    font:2rem arial;
-    text-shadow: 10px 10px 10px #aaa;
-}
-
-
-.container{
+.container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px , 200px));
-    grid-template-rows: repeat(auto-fill,minmax(150px,200px));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 300px));
     grid-auto-flow: dense;
     grid-gap: 10px;
     justify-content: center;
-    margin-top: 700px;
+    margin-top: 100px;
     margin-bottom: 40px;
-
 }
-.container img:nth-child(9){
+
+.container img:nth-child(9) {
     grid-column: 1 / 3;
 }
 
-.container img{
+.container img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
     object-fit: cover;
 }
-.footer{
-    margin: 0;
-    position: relative;
-    bottom: 0;
-    
+
+.cat-random {
+    width: 500px;
+    display: block;
+    margin: 10px auto;
+}
+
+.cat-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+button {
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: auto;
     width: 100%;
     padding: 30px 0px;
     background-color: #333;
-    
     text-align: center;
     color: #fff;
-    
-    flex-grow: 1;
-    order: 10;
-
 }
-.footer a{
+
+.footer a {
     color: #fff;
 }
 
-.aside{
+.aside {
     width: auto;
     margin-bottom: 100px;
 }
 
-.section-races__card{
+.section-races__card {
     width: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
-.section-races__article{
+
+.section-races__article {
     flex-basis: 250px;
     margin: 20px;
 }
 
-.section-races__title{
+.section-races__title {
     text-align: center;
     font-family: 2rem arial;
     text-transform: capitalize;
 }
 
-.section-races__article img{
+.section-races__article img {
     display: block;
     width: 100%;
     object-fit: cover;
-
 }
-.section-races__enlaces a{
+
+.section-races__enlaces a {
     padding: 10px;
     color: #fff;
     text-decoration: none;
     background-color: #333;
     margin-left: 10px;
 }
-.section-races__enlaces{
+
+.section-races__enlaces {
     width: 300px;
     margin: 30px auto;
 }
-.enlazes a:hover{
+
+.enlazes a:hover {
     background-color: #444;
 }
-/* responsive  */
-@media screen and (max-width: 600px){
 
-    .container img:nth-child(9){
+
+/* responsive  */
+
+@media screen and (max-width: 600px) {
+    .container img:nth-child(9) {
         grid-column: 1 / 2;
     }
 }
 
-
-
-.card-cat{
-    width: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px,300px));
-    grid-template-rows: repeat(auto-fill, minmax(200px,300px));
-    grid-gap: 20px;
-    justify-content: center;
-    color: #aaa;
+.card-cat {
+    columns: 5 320px;
+    column-gap: 10px;
 }
 
-.cat-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card-cat img {
+    max-width: 100%;
 }
-.card-cat__intruccion{
+
+.card-cat__intruccion {
     color: hsl(0, 5%, 50%);
 }
-.cat-random-title{
+
+.cat-random-title {
     color: #333;
     text-align: center;
 }
-.section-races__article{
+
+.section-races__article {
     flex-basis: 300px;
 }
-.section-races__title{
+
+.section-races__title {
     text-align: center;
+}
+
+.error-404 {
+    width: 400px;
+    margin: 20px auto;
+}
+
+.logo-jansel {
+    position: absolute;
+    display: block;
+    width: 250px;
+    left: 30px;
 }
